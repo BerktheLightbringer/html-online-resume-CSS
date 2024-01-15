@@ -8,215 +8,36 @@
     <link rel="stylesheet" href="styles.scss">
 <style>
 
-    
+.skip-intro.space-button {
+      display: block;
+    }
 
-body, html{
-  height: 100%;
-  min-height: 100vh;
-  margin: 0px;
-}
+    /* After a while (you can set the time in milliseconds), hide the button */
 
-.star-wars-intro {
-  background: url('https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-25_bc15ec98.jpeg') center center;
-  width: 100%;
-  height: 100%;
-  font-family: "Droid Sans", arial, verdana, sans-serif;
-  font-weight: 700;
-  color: #EBD71C;
-  background-color: #000;
-  overflow: hidden;
-  position: relative;
-}
+    h5 > a {
+      color: #EBD71C;
 
-.star-wars-intro p.intro-text {
-  position: relative;
-  max-width: 16em;
-  font-size: 200%;
-  font-weight: 400;
-  margin: 20% auto;
-  color: #4ee;
-  opacity: 0;
-  z-index: 1;
-  text-align: center;
-  -webkit-animation: intro 2s ease-out;
-  -moz-animation: intro 2s ease-out;
-  -ms-animation: intro 2s ease-out;
-  -o-animation: intro 2s ease-out;
-  animation: intro 2s ease-out;
-}
+    }
+  
 
-.star-wars-intro .main-content{
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  z-index: 3;
-  width: 98%;
-  height: 50em;
-  bottom: 0;
-  font-size: 80px;
-  font-weight: bold;
-  text-align: justify;
-  overflow: hidden;
-  transform-origin: 50% 100%;
-  transform: perspective(350px) rotateX(25deg);
-}
-
-.star-wars-intro .main-content:after {
-  position: absolute;
-  content: ' ';
-  top: 0;
-  bottom: 60%;
-  background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-  pointer-events: none;
-}
-
-.star-wars-intro .space-button {
-  color: #EBD71C;
-  border: 12px solid #EBD71C;
-  padding: 20px;
-  background: transparent;
-  text-decoration: none;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-}
-
-.star-wars-intro .space-button:hover {
-  background-color: #D2BE03;
-  border-color: #D2BE03;
-  color: black;
-}
-
-.star-wars-intro .space-button:active,
-.star-wars-intro .space-button:focus {
-  background-color: #B8A40A;
-  border-color: #B8A40A;
-  color: black;
-}
-
-.star-wars-intro .title-content {
-  position: absolute;
-  top: 100%;
-  animation: scroll 120s linear 4s forwards;
-}
-
-.star-wars-intro .title-content > .content-header {
-  text-align: center;
-}
-
-/* Main Image Styles */
-
-.star-wars-intro .main-logo {
-  position: absolute;
-  width: 2.6em;
-  left: 50%;
-  top: 20vh;
-  font-size: 10em;
-  text-align: center;
-  margin-left: -1.3em;
-  line-height: 0.8em;
-  letter-spacing: -0.05em;
-  color: #000;
-  text-shadow: -2px -2px 0 #EBD71C, 2px -2px 0 #EBD71C, -2px 2px 0 #EBD71C, 2px 2px 0 #EBD71C;
-  opacity: 0;
-  z-index: 1;
-  -webkit-animation: logo 5s ease-out 2.5s;
-  -moz-animation: logo 5s ease-out 2.5s;
-  -ms-animation: logo 5s ease-out 2.5s;
-  -o-animation: logo 5s ease-out 2.5s;
-  animation: logo 5s ease-out 2.5s;
-}
-
-.star-wars-intro .main-logo > img {
-  max-width: 150%;
-  border-radius: 50%;
-}
-
-@-webkit-keyframes intro {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-moz-keyframes intro {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-ms-keyframes intro {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@-o-keyframes intro {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes intro {
-  0% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-
-@-webkit-keyframes logo {
-  0% { -webkit-transform: scale(1); opacity: 1; }
-  50% { opacity: 1; }
-  100% { -webkit-transform: scale(0.1); opacity: 0; }
-}
-
-@-moz-keyframes logo {
-  0% { -moz-transform: scale(1); opacity: 1; }
-  50% { opacity: 1; }
-  100% { -moz-transform: scale(0.1); opacity: 0; }
-}
-
-@-ms-keyframes logo {
-  0% { -ms-transform: scale(1); opacity: 1; }
-  50% { opacity: 1; }
-  100% { -ms-transform: scale(0.1); opacity: 0; }
-}
-
-@-o-keyframes logo {
-  0% { -o-transform: scale(1); opacity: 1; }
-  50% { opacity: 1; }
-  100% { -o-transform: scale(0.1); opacity: 0; }
-}
-
-@keyframes logo {
-  0% { transform: scale(1); opacity: 1; }
-  50% { opacity: 1; }
-  100% { transform: scale(0.1); opacity: 0; }
-}
-
-@keyframes scroll {
-  0% { top: 100%; }
-  100% { top: -170%; }
-}
-
-@media screen and (max-width: 2040px) {
-  .star-wars-intro .main-content {
-    font-size: 35px;
-  }
-  .star-wars-intro .title-content {
-    position: absolute;
-    top: 100%;
-    animation: scroll 100s linear 4s forwards;
-  }
-}
-
-.personal-data{
-    text-align: center;
-}
 </style>
 </head>
 <body>
-    <div class="star-wars-intro">
 
+  <div class="style-audio">
+    <audio id="myAudio" controls>
+      <source src="https://ia803204.us.archive.org/16/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" type="audio/mp3">
+      Your browser choose the dark side.
+    </audio>
+  </div>
+  
+
+    <div class="star-wars-intro">
+      <div class="skip-intro">
+        <a href=./resume.html class="space-button" id="space-button">Skip Intro!</a></div>
+     
+
+        
         <!-- Blue Intro Text -->
         <p class="intro-text">
           A few days ago, during...
@@ -248,17 +69,31 @@ body, html{
     I am currently pursuing a master's degree in Engineering Management at Middle East Technical University, where I am enhancing my skills and knowledge in project planning, risk management, quality control, and leadership. I am also the founder of The Light Bringer, Turkey's first peer-to-peer solar leasing platform, which aims to provide affordable and sustainable energy solutions to communities and businesses.
     
     I have a passion for renewable energy and a talent for problem-solving, communication, and client relationships. I continuously stay updated on the latest developments and innovations in the solar industry, and I strive to deliver the most efficient and effective solutions that meet the needs and challenges of the customers. My goal is to contribute to the global transition to clean and renewable energy sources, and to make a positive impact on the environment and society.</p>	
-      
-                <audio src="https://ia803204.us.archive.org/16/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.mp3" autoplay>
-                    Your browser choose the dark side.
-                  </audio>
+
 
                   
       <!-- button or link or whatever -->
-      <a href="./resume.html" class="space-button">Click for the Employment History!</a>
+      <a href="./resume.html" class="Next-Page">Click for the Employment History!</a>
               
           </div>
         </div>
       </div>
+
+      <script>
+        setTimeout(function() {
+        var myButton = document.getElementById('space-button');
+        myButton.style.display = 'none';
+        }, 8000);
+      </script>
+
+      <script>
+      // Sayfa yüklendiğinde müziği başlatmak için
+      window.addEventListener('load', function() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+       });
+      </script>
+
+
 </body>
 </html>
